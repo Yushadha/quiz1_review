@@ -1,0 +1,25 @@
+<h1><strong>Support Requests</strong></h1>
+
+<p>Find me in app/views/support_requests/index.html.erb</p>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Department</th>
+		<th>Message</th>
+		<th>Actions</th>
+	</tr>
+	<tr>
+	<% @supreq.each do |s| %>
+		<td><%= s.name %></td>
+		<td><%= s.email %></td>
+		<td><%= s.department %></td>
+		<td><%= s.message %></td>
+		<td>
+			<%=link_to "edit", edit_support_request_path(s) %>
+			<%=link_to "delete", support_request_path(s), method: :delete, data: {confirm: "Are you sure?"} %>
+		</td>
+	</tr>
+	<% end %>
+</table>

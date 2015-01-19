@@ -1,0 +1,23 @@
+<h1><strong>Supporter</strong></h1>
+
+<p> <strong> HELEN! </strong>Why isnt this working : [ </p>
+
+<%= form_for @supreq do |s| %>
+
+<table>
+	<tr>
+		<th><%= s.label :name %></th>
+		<th><%= s.label :email %></th>
+		<th><%= s.label :department %></th>
+		<th><%= s.label :message %></th>
+		<th>subtmit</th>
+	</tr>
+	<tr>
+		<td><%= s.text_field :name %></td>
+		<td><%= s.text_field :email %></td>
+		<td><%= s.text_field :department %></td>
+		<td><%= s.text_field :message %></td>
+		<td><%= s.submit %></td>
+	</tr>
+</table>
+<% end %>
